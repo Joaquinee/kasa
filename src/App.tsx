@@ -1,15 +1,15 @@
 import React from 'react';
-import './styles/App.css';
+import './styles/App.scss';
 import AppRouter from './router/index';
+import Navbar from './components/Navbar/navbar';
 
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <AppRouter />
-    </div>
+      <div>
+          <Navbar />
+          <AppRouter />
+      </div>
   );
 }
-
-
 export default App;

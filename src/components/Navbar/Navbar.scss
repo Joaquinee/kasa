@@ -1,0 +1,25 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px;
+    
+    img {
+        height: 70px;
+    }
+    li {
+        list-style: none;
+        display: inline-block;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        margin: 0 10px;
+
+        &:hover {
+            color: #f1356d;
+        }
+    }
+    
+}
