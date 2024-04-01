@@ -12,9 +12,6 @@ const Home: React.FC = () => {
             </header>
             <main>
                 <div className="container">
-
-            
-                 
                    <div className="card-container">
                      {DataBase.map((element, index) => {
                          return (
