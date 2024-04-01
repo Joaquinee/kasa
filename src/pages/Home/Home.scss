@@ -3,12 +3,12 @@ header {
     position: relative;
     display: inline-block;
     height: 250px;
-
+ 
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
-        filter: drop-shadow(20px 20px 20px rgba(0, 0, 0, 0.6));
+        border-radius: 20px;
     }
     h1 {
         position: absolute;
@@ -19,5 +19,50 @@ header {
         font-size: 40px;
         text-shadow: rgba(0, 0, 0, 0.1);
     }
+}
+.container {
+    margin-top: 20px;
+    border-radius: 25px;
+    height: auto;
+    width: 100%;
+    background-color: #F6F6F6;
+
+
+    .card-container {
+        padding-top: 25px;
+        margin: 40px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+    
+        .card {
+            position: relative;
+            margin: 10px;
+            width: 30%;
+            height: 340px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+                transform: scale(1.05);
+            }
+            img {
+                object-fit: cover;
+            }
+            p {
+                position: absolute;
+                bottom: 10px;
+                left: 10px;
+                z-index: 1000;
+                background-color: rgba(255, 255, 255, 0.7);
+                padding: 5px;
+              }
+            
+        }
+    }
+    
     
 }

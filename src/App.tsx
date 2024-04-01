@@ -7,8 +7,11 @@ import Navbar from './components/Navbar/navbar';
 const App: React.FC = () => {
   return (
       <div>
+        <div className="main">
           <Navbar />
           <AppRouter />
+
+        </div>
       </div>
   );
 }
