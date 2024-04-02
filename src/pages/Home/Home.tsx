@@ -1,9 +1,16 @@
 import React from 'react';
 import './Home.scss';
+import { Link } from 'react-router-dom'; // Importez le composant Link
 import Image from '../../assets/fond_un.png';
 import DataBase from '../../api/db.json';
 
+
+
+
+
 const Home: React.FC = () => {
+
+  
     return (
         <div>
             <header>
@@ -15,13 +22,14 @@ const Home: React.FC = () => {
                    <div className="card-container">
                      {DataBase.map((element, index) => {
                          return (
-                             <div className="card" key={index}>
-                                 <img src={element.cover} alt={element.title} />
-                                 <p>{element.title}</p>
-                             </div>
+                            <Link to={`/view/${element.id}`} key={index}>
+                                <div className="card" key={index} >
+                                    <img src={element.cover} alt={element.title}/>
+                                    <p>{element.title}</p>
+                                </div>
+                             </Link>
                          );
                      })}
-                        
                    </div>
                 </div>
             </main>

@@ -1,0 +1,102 @@
+.view {
+    flex-grow: 1;
+
+    .view-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+
+
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            
+            
+        }
+
+        .view-infos {
+            display: flex;
+            flex-direction: column;
+            margin-top: 5px;
+
+            h1 {
+                line-height: 0px;
+                font-size: 1.5rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+
+
+            .view-tag {
+                display: flex;
+                flex-wrap: wrap;
+                margin-top: 10px;
+
+                button {
+                    padding: 5px 15px;
+                    height: 30px;
+                    cursor: pointer;
+                    margin-right: 7px;
+                    background-color: #FF6060;
+                    border-radius: 20px;
+                    border: none;
+                    color: white;
+
+                }
+            }
+        }
+        .view-host {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px;
+
+            .host-name {
+                display: flex;
+                align-items: center;
+               
+                
+                
+            }
+
+            img {
+                margin-left: 5px;
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+           
+ 
+            }
+            .host-stars {
+                
+                display: flex;
+                justify-content: flex-end; 
+               
+            }
+            .star-image {
+                
+                margin-top: 20px;
+                width: 20px; 
+                height: 20px;
+            }
+             
+
+        }
+        
+        
+    
+
+    } 
+    .deroulant {
+        width: 100%;
+        display: flex;
+        margin-top: 10px;
+        justify-content: space-between;
+     }
+    
+}

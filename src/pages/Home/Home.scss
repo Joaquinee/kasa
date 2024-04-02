@@ -1,5 +1,6 @@
 header {
     width: 100%;
+    margin-top: 50px;
     position: relative;
     display: inline-block;
     height: 250px;
@@ -57,6 +58,7 @@ header {
                 bottom: 10px;
                 left: 10px;
                 z-index: 1000;
+                color: black;
                 background-color: rgba(255, 255, 255, 0.7);
                 padding: 5px;
               }

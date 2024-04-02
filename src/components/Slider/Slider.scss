@@ -1,0 +1,48 @@
+.slider-container {
+
+    margin-top: 50px;
+    position: relative;
+  
+
+   
+    .slider-image {
+        width: 100%;
+        height: auto;
+      
+        height: 500px;
+        border-radius: 20px;
+        object-fit: cover;
+
+      
+    }
+  
+    .slider-buttons {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+  
+    .arrow-button {
+        background: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+        transition: transform 0.3s ease-in-out;
+  
+      &:hover {
+            transform: scale(1.1);
+      }
+  
+      img {
+            width: 40px; 
+            height: 40px;
+      }
+    }
+  }
+  
+
