@@ -1,0 +1,45 @@
+.card {
+    position: relative;
+    width: 340px;
+    margin-left: 20px;
+    margin-right: 20px;
+    height: 340px;
+    margin-top: 25px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        transform: scale(1.05);
+    }
+
+    
+
+    img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        filter: brightness(75%);
+    }
+    p {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+
+
+        
+        z-index: 1000;
+        color: rgb(255, 255, 255);
+       
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 25.67px;
+        text-align: left;
+
+        
+        
+    }
+
+
+}

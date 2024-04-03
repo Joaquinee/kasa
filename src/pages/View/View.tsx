@@ -19,7 +19,7 @@ const View: React.FC = () => {
         getItems();
     }, [id]);
 
-    const nameSplit = data?.host.name.split('  ');
+    const nameSplit = data?.host.name.split(' ');
 
 
     return (
@@ -42,9 +42,11 @@ const View: React.FC = () => {
                         </div>
                         <div className="view-host">
                           
-                            <div className="host-name">
-                                <span>{nameSplit?.[0]}</span>
-                                <span>{nameSplit?.[1]}</span>
+                            <div className="host-info">
+                                <div className="host-name">
+                                    <span>{nameSplit?.[0]}</span>
+                                    <span>{nameSplit?.[1]}</span>
+                                </div>
                                 <img src={data.host.picture} alt="image-host" />
                             </div>
                            
@@ -54,11 +56,14 @@ const View: React.FC = () => {
                         </div>
                     </div>
 
-                    <div className="deroulant">
+
+
+                     <div className="cols">
                         <Collapse name='Description' elements={data.description} />
                         <Collapse name='Equipement' elements={data.equipments} />
+                    </div>               
     
-                    </div>
+                    
                 </main>        
                 </div>
                 

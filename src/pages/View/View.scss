@@ -24,18 +24,27 @@
             margin-top: 5px;
 
             h1 {
-                line-height: 0px;
-                font-size: 1.5rem;
+                font-family: Montserrat;
+                font-size: 36px;
+                font-weight: 500;
+                line-height: 51.34px;
+                color: #FF6060;
             }
             p {
-                font-size: 1rem;
+                font-family: Montserrat;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 25.67px;
+
+
             }
 
 
             .view-tag {
                 display: flex;
                 flex-wrap: wrap;
-                margin-top: 10px;
+                margin-top: 23px;
+                gap: 10px;
 
                 button {
                     padding: 5px 15px;
@@ -56,11 +65,18 @@
             align-items: center;
             margin: 5px;
 
-            .host-name {
+            .host-info {
                 display: flex;
                 align-items: center;
-               
                 
+                .host-name {
+                    text-align: right;
+                    margin-right: 5px;
+                }
+                span {
+                    display: block;
+                }
+               
                 
             }
 
@@ -74,8 +90,7 @@
             }
             .host-stars {
                 
-                display: flex;
-                justify-content: flex-end; 
+                margin-left: auto;
                
             }
             .star-image {
@@ -92,11 +107,13 @@
     
 
     } 
-    .deroulant {
-        width: 100%;
+    .cols {
         display: flex;
-        margin-top: 10px;
         justify-content: space-between;
+        flex: 1 50%;
+        gap: 76px;
+        margin-top: 26px;
+
      }
     
 }

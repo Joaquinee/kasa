@@ -1,24 +1,31 @@
 import React, { ReactNode, useState } from 'react';
+
 import './Collapse.scss';
+
+
 interface CollapseProps {
     name: string;
     elements: React.ReactNode[] | string;
 }
 
 const Collapse: React.FC<CollapseProps> = ({ name, elements }) => {
-    const [isOpen, setIsOpen] = useState(false);
+    const [active, setActive] = useState<boolean>(false);
 
-    const toggleCollapse = () => {
-        setIsOpen(!isOpen);
+    const toggleCollapsible = () => {
+        setActive(!active);
     };
 
     return (
-        <div className='collapse'>
-            <div>
-                <button onClick={toggleCollapse} >{name}</button>
-            </div>
-            {isOpen && (
-                <div>
+        <div className="collapse">
+            <div className="btn">
+                <div className="header">
+                    <button className={`collapsible ${active ? 'active' : ''}`} onClick={toggleCollapsible}>
+                        {name}
+                        <img src={require('../../assets/arrow_down.png')} alt="aaa" />
+                    </button>
+                </div>
+                <div className={`content ${active ? 'active' : ''}`}>
+               
                     {typeof elements === 'string' ? (
                         <div>{elements}</div>
                     ) : (
@@ -26,10 +33,12 @@ const Collapse: React.FC<CollapseProps> = ({ name, elements }) => {
                             <div key={index}>{element}</div>
                         ))
                     )}
+               
                 </div>
-            )}
+            </div>
         </div>
     );
 };
 
 export default Collapse;
+
