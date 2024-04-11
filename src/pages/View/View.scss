@@ -62,8 +62,15 @@
         .view-host {
             display: flex;
             flex-direction: column;
-            align-items: center;
             margin: 5px;
+
+            @media screen and (max-width: 768px){
+                width: 100%;
+                flex-direction: row-reverse;
+                justify-content: space-between;
+              
+            }
+           
 
             .host-info {
                 display: flex;
@@ -87,11 +94,6 @@
                 border-radius: 50%;
            
  
-            }
-            .host-stars {
-                
-                margin-left: auto;
-               
             }
             .star-image {
                 
