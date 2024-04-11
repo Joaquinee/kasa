@@ -7,23 +7,26 @@
    
     .slider-image {
         width: 100%;
-        height: auto;
-      
         height: 500px;
         border-radius: 20px;
         object-fit: cover;
+
+
+        @media screen and (max-width: 768px) {
+          height: 300px;
+        }
+        
       }
 
       .current {
         position: absolute;
         bottom: 0;
-        left: 45%;
+        left: 43%;
         bottom: 5px;
+        @media screen and (max-width: 768px) {
+          left: 35%;
+        }
 
-  
-      
-      
-      
     }
   
     .slider-buttons {
@@ -35,6 +38,7 @@
         width: 100%;
         padding: 0 20px;
         box-sizing: border-box;
+     
     }
   
     .arrow-button {
@@ -49,8 +53,8 @@
       }
   
       img {
-            width: 40px; 
-            height: 40px;
+        width: 40px; 
+        height: 40px;
       }
     }
   }

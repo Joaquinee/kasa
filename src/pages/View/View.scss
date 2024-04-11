@@ -102,10 +102,6 @@
              
 
         }
-        
-        
-    
-
     } 
     .cols {
         display: flex;
@@ -114,6 +110,15 @@
         gap: 76px;
         margin-top: 26px;
 
-     }
+    }
+    @media screen and (max-width: 768px) {
+        .cols {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            flex: 1 100%;
+        }
+        
+    }
     
 }
