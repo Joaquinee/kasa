@@ -28,7 +28,7 @@ const View: React.FC = () => {
             {data && (
                 <div>
                 <div>
-                    <Slider images={data.pictures} />
+                    <Slider images={data.pictures} alt={data.title} />
                 </div>
                 <div className="view">
                     <div className="view-content">

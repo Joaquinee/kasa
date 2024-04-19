@@ -1,22 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Slider.scss';
 
 interface SliderProps {
     images: string[];
+    alt: string;
+
 }
 
-const Slider: React.FC<SliderProps> = ({ images }) => {
+const Slider: React.FC<SliderProps> = ({ images, alt }) => {
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    const nextImage = () => {
+    const nextImage = useCallback(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    };
+    }, [images]);
 
-    const previousImage = () => {
+    const previousImage = useCallback(() => {
         setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-    };
+    }, [images]);
 
- 
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -24,12 +25,12 @@ const Slider: React.FC<SliderProps> = ({ images }) => {
         }, 4000);
 
         return () => clearInterval(interval);
-    }, [currentImageIndex]);
+    }, [currentImageIndex, nextImage]);
 
     return (
         <div className='slider-container'>
            <div className="slide">
-            <img className='slider-image' src={images[currentImageIndex]} alt="Slider Image" />
+            <img className='slider-image' src={images[currentImageIndex]} alt={alt} />
            </div>
             {images.length > 1 && (
                 <div>
