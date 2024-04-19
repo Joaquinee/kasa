@@ -16,15 +16,12 @@ const Slider: React.FC<SliderProps> = ({ images }) => {
         setCurrentImageIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
     };
 
-    const handleImageSelect = (index: number) => {
-        setCurrentImageIndex(index);
-    };
-
+ 
 
     useEffect(() => {
         const interval = setInterval(() => {
             nextImage();
-        }, 5000);
+        }, 4000);
 
         return () => clearInterval(interval);
     }, [currentImageIndex]);
@@ -37,18 +34,10 @@ const Slider: React.FC<SliderProps> = ({ images }) => {
             {images.length > 1 && (
                 <div>
                      <div className='current'>
-                        {images.map((image, index) => (
-                            <input 
-                                key={index} 
-                                type="radio" 
-                                name="controls" 
-                                checked={currentImageIndex === index} 
-                                onChange={() => handleImageSelect(index)} // Appel de la fonction handleImageSelect lorsqu'un input est modifié
-                                readOnly 
-                            />
-                        ))}
+                       <p>{currentImageIndex +1}/{images.length} </p>
                     </div>
-                    <div className='slider-buttons'>
+                 
+                <div className='slider-buttons'>
                     <button className='arrow-button' onClick={previousImage}>
                         <img src={require('../../assets/arrow_left.png')} alt='Previous' />
                     </button>

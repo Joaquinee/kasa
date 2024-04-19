@@ -1,0 +1,24 @@
+.view-tag {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 23px;
+    gap: 10px;
+
+    button {
+        padding: 5px 15px;
+        height: 30px;
+        cursor: pointer;
+        margin-right: 7px;
+        background-color: #FF6060;
+        border-radius: 20px;
+        border: none;
+        color: white;
+
+        font-family: Montserrat;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 19.96px;
+
+
+    }
+}

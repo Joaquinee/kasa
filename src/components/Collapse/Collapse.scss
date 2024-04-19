@@ -8,6 +8,17 @@
     display: flex;
     flex-direction: column;
     height: auto;
+
+    button {
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 700;
+
+        @media screen and (max-width: 768px){
+            font-size: 13px;
+        }
+
+    }
 }
 
 .collapsible {
@@ -35,11 +46,18 @@
     }
 
     &.active {
-        
         img {
             transform: rotate(180deg); 
-        }
+            transition: transform 0.4s ease;
     }
+    }
+    &.desactive {
+        img {
+            transform: rotate(0deg); 
+            transition: transform 0.4s ease;
+        } 
+    }
+   
 }
 
 .content {
@@ -63,5 +81,16 @@
     div {
         margin-top: 15px;
         margin-bottom: 15px;
+
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 25.67px;
+
+
+        @media screen and (max-width: 768px) {
+            font-size: 12px;
+        }
     }
+
 }

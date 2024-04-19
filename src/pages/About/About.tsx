@@ -3,16 +3,14 @@ import Image from '../../assets/fond_deux.png';
 import Collapse from '../../components/Collapse/Collapse';
 import './About.scss';
 import { loremIpsum  } from 'react-lorem-ipsum';
+import Banner from '../../components/Banner/Banner';
 
 const About: React.FC = () => {
 
     
     return (
         <div>
-             <header>
-                <img src={Image} alt="fonds_un" />
-            </header>
-
+            <Banner title="" image={Image}></Banner>
             <div className="container-about">
                 <Collapse name='Fiabilité' elements={loremIpsum({p: 3})}/>
                 <Collapse name='Respect' elements={loremIpsum({p: 3})} />

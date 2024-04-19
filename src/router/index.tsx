@@ -1,5 +1,5 @@
 import React from 'react';
-import { Routes,Route} from 'react-router-dom';
+import { Routes,Route, BrowserRouter} from 'react-router-dom';
 
 import About from '../pages/About/About';
 import Home from '../pages/Home/Home';
@@ -11,7 +11,6 @@ const AppRouter: React.FC = () => {
 
     return (
         <Routes>
-
             <Route path="/" Component={Home}/>
             <Route path="/about" Component={About} />
             <Route path='*' Component={NotFound} />

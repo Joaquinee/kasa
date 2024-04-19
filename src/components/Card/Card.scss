@@ -13,6 +13,11 @@
         transform: scale(1.05);
     }
 
+    @media screen and (max-width: 768px) {
+        width: 100%;
+        margin: 10px 0;   
+    }
+
     
 
     img {
@@ -35,7 +40,7 @@
         font-size: 18px;
         font-weight: 700;
         line-height: 25.67px;
-        text-align: left;
+
 
         
         

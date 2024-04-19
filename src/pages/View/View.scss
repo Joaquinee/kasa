@@ -38,26 +38,6 @@
 
 
             }
-
-
-            .view-tag {
-                display: flex;
-                flex-wrap: wrap;
-                margin-top: 23px;
-                gap: 10px;
-
-                button {
-                    padding: 5px 15px;
-                    height: 30px;
-                    cursor: pointer;
-                    margin-right: 7px;
-                    background-color: #FF6060;
-                    border-radius: 20px;
-                    border: none;
-                    color: white;
-
-                }
-            }
         }
         .view-host {
             display: flex;
@@ -79,6 +59,14 @@
                 .host-name {
                     text-align: right;
                     margin-right: 5px;
+                    font-family: Montserrat;
+                    font-size: 18px;
+                    font-weight: 500;
+                    line-height: 25.67px;
+                    color: #FF6060;
+
+
+
                 }
                 span {
                     display: block;

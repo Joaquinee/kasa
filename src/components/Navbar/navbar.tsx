@@ -1,17 +1,23 @@
 import React from 'react';
 import './Navbar.scss';
-import { Link } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
+import path from 'path';
 
 const Navbar: React.FC = () => {
+
     return (
         <nav>
-            <img src={require('../../assets/LOGO.png')} alt="logo_site" />
+            <picture>
+                <source media="(max-width: 768px)" srcSet={require('../../assets/LOGO_mobile.png')} />
+                <img src={require('../../assets/LOGO.png')} alt="logo_site" />
+            </picture>
+           
             <ul>
                 <li>
-                    <Link to="/">Accueil</Link>
+                    <NavLink to="/">Accueil</NavLink>
                 </li>
                 <li>
-                    <Link to="about">A propos</Link>
+                    <NavLink to="about">A propos</NavLink>
                 </li>
             </ul>
         </nav>

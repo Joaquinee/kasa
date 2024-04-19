@@ -6,7 +6,6 @@ interface StarsProps {
 
 const Stars: React.FC<StarsProps> = ({ rating }) => {
     const maxRating = 5;
-    // Remplacez les valeurs fullStar et emptyStar par les chemins d'accès de vos images
     const fullStarImage = require('../../assets/stars_v.png');
     const emptyStarImage = require('../../assets/stars_n.png');;
 
