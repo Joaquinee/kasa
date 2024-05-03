@@ -7,7 +7,7 @@ interface StarsProps {
 const Stars: React.FC<StarsProps> = ({ rating }) => {
     const maxRating = 5;
     const fullStarImage = require('../../assets/stars_v.png');
-    const emptyStarImage = require('../../assets/stars_n.png');;
+    const emptyStarImage = require('../../assets/stars_n.png');
 
     const renderStars = () => {
         const stars = [];

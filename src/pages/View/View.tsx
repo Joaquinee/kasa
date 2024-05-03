@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate  } from 'react-router-dom';
 import DataBase from '../../api/db.json';
 import Item from '../../types/items';
 import './View.scss';
@@ -7,15 +7,25 @@ import Slider from '../../components/Slider/Slider';
 import Stars from '../../components/Stars/Stars';
 import Collapse from '../../components/Collapse/Collapse';
 import Tags from '../../components/Tags/Tags';
+import {  } from 'react-router-dom'; // Assurez-vous d'avoir 'react-router-dom' installé et configuré dans votre application
+
 
 const View: React.FC = () => {
+
     const { id } = useParams(); 
     const [data, setData] = useState<Item | null>(null);
-
+    const navigate = useNavigate();
     useEffect(() => {
         const getItems = () => {
             let item = DataBase.find((element) => element.id === id);
-            setData(item || null);
+            if (item) {
+                setData(item);
+            } else {
+                navigate('/404')
+               
+                
+               
+            }
         };
         getItems();
     }, [id]);
